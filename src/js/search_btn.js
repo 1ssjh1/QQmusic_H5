@@ -26,7 +26,8 @@ let search_btn = document.querySelector(".search_btn"),
     hot_mod = document.querySelector(".hot"),
     search_something = document.querySelector(".search_something"),
     tab_cont = document.querySelector(".tab_cont"),
-    footers = document.querySelector(".footers")
+    footers = document.querySelector(".footers"),
+    history = document.querySelector(".history")
 
 
 
@@ -40,6 +41,7 @@ search_btn.addEventListener("click", () => {
     search_something.style.display = "none";
     hot_mod.style.display = "block";
     re.style.display = "block";
+    history.style.display = "block"
 
 });
 
@@ -53,6 +55,7 @@ re.addEventListener("click", (e) => {
     hot_mod.style.display = "none"
     search_something.style.display = "none";
     disappear.style.display = "block";
+    history.style.display = "none"
 
 
 })

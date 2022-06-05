@@ -119,7 +119,6 @@ customElements.define('search-card', class search_component extends HTMLElement 
         //选择 正确的 div
         [...this._shadowRoot.querySelectorAll(".search_results div")]
         .forEach((item, index) => {
-            console.log(item.children[0]);
             item.children[0].innerText = newValue[index].title
             item.children[1].innerText = newValue[index].artist
 

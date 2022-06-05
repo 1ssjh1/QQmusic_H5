@@ -54,8 +54,7 @@ customElements.define('swiper-card', class TodoApp extends HTMLElement {
 }
 .swiper {
     width: 98%;
-    margin: 0 auto;
-    border: 1px solid pink;
+    margin: -1.333rem auto;
     overflow: hidden; 
     margin-top: .8rem;
 }
@@ -65,10 +64,11 @@ customElements.define('swiper-card', class TodoApp extends HTMLElement {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .swiper li {
-    margin: 0 .2333rem 0 .2333rem;
+    margin-left:.2333rem;
     text-decoration: none;
     list-style: none;
     width: 3.1213rem;
@@ -118,9 +118,11 @@ customElements.define('swiper-card', class TodoApp extends HTMLElement {
 .swiper .title h3 {
     font-size: .48rem;
     text-align: center;
+    margin-left:0.8rem;
 }
 
 .swiper .title a {
+    text-decoration: none;
     font-size: .3733rem;
     text-align: center;
     color: rgba(26,26,26,.5);
@@ -134,69 +136,7 @@ customElements.define('swiper-card', class TodoApp extends HTMLElement {
                <a href="javascript:void(0);"> 更多 ></a>
            </div>
            <ul class="scroll_wrapper">
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
-               <li class="slider_item">
-                   <div>
-                       <img src="" alt="">
-                       <h5> 欧美|流行节奏控</h5>
-                       <p class="qu">>6771.3万</p>
-                   </div>
-               </li>
+     
            </ul>
            
            </div>
@@ -253,40 +193,66 @@ customElements.define('swiper-card', class TodoApp extends HTMLElement {
 
         switch (name) {
             case '_data':
-                this.render_data()
+
+                this.render_tree();
+                this.render_data();
                 break;
 
 
         }
     };
-    render_data() {
-        const img = this._shadowRoot.querySelectorAll("img"),
-            h5 = this._shadowRoot.querySelectorAll("h5"),
-            qu = this._shadowRoot.querySelectorAll(".qu")
-        if (this._data.length == 9) {
+    render_tree() {
 
 
-            this.data.map((item, index) => {
-                if (index > 5) {
-                    return;
-                }
-                img[index].src = item.background;
-                h5[index].innerText = item.description;
-                qu[index].innerText = item.title;
+        for (let i = 0; i < this.getAttribute("_data"); i++) {
+            let slider_item = document.createElement("li");
+            slider_item.className = "slider_item"
+            this.scroll_wrapper.appendChild(slider_item)
 
 
-            })
-        } else {
+        }
+        const slider_item = this._shadowRoot.querySelectorAll(".slider_item");
 
-            this.data.map((item, index) => {
-                img[index].src = item.cover;
-                h5[index].innerText = item.title;
-                qu[index].innerText = ">" + item.views + "万";
+        for (let i = 0; i < this.getAttribute("_data"); i++) {
+            let img_card = document.createElement("img-card");
+            slider_item[i].appendChild(img_card);
 
-            })
         }
 
 
+    }
+
+    render_data() {
+        let img_cards = this._shadowRoot.querySelectorAll("img-card");
+
+
+        [...img_cards].forEach((item, index) => {
+
+            let _data = this.data[index];
+            item.setAttribute("thing",
+                _data.cover ? _data.title : _data.description);
+
+
+            item.data = {
+                cover: _data.cover ? _data.cover : _data.background,
+                views: _data.views ? _data.views : _data.title,
+            }
+
+            let width_height = this.getAttribute("width_height")
+            if (width_height) {
+                item.setAttribute("width_height", width_height.split(","));
+                [...this._shadowRoot.querySelectorAll(".slider_item")]
+                .forEach((item) => {
+
+                    item.style.marginRight = width_height.split(",")[0] / 5 + "rem";
+                })
+            }
+
+
+
+
+
+        })
 
     }
     set data(val) {

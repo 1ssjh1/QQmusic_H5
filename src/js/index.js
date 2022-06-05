@@ -8,6 +8,7 @@ import "../font/iconfont.woff2"
 
 
 import "./lunbo.js"
+import "./history_component.js"
 import "./img_component.js"
 import "./hot_component.js"
 import "./list_component.js"

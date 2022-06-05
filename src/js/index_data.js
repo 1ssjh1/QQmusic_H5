@@ -48,8 +48,17 @@ let hot = document.querySelector(".hot")
 
 // );
 // 重构后 加入 了防抖板块
+// 历史组件函数
+function history_data(value) {
+    document.querySelector("history-card").data = value;
+}
+
 function out(e) {
     if (e.keyCode === 13 && this == document.activeElement && this.value) {
+
+        //  历史搜素组件传值
+        history_data(this.value);
+        // 请求数据 给 搜索
         search_get("/search?keyword", search_btn.value).then((res) => {
             hot.style.display = "none";
             search_something.style.display = "block"
@@ -112,6 +121,4 @@ index_get("/ranking").then(res => {
 
     return res
 
-}).then((res) => {
-    console.log(res);
 })

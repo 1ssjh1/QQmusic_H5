@@ -120,6 +120,7 @@ customElements.define('search-card', class search_component extends HTMLElement 
         [...this._shadowRoot.querySelectorAll(".search_results div")]
         .forEach((item, index) => {
             item.children[0].innerText = newValue[index].title
+
             item.children[1].innerText = newValue[index].artist
 
         })

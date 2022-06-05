@@ -5,6 +5,7 @@
 customElements.define('hot-card', class hot_component extends HTMLElement {
     constructor() {
         super();
+
         this._shadowRoot = this.attachShadow({ 'mode': 'open' });
 
 

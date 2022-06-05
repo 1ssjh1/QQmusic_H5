@@ -43,7 +43,7 @@ customElements.define('img-card', class img_component extends HTMLElement {
     background-size: contain; */
 }
 
-
+ 
 
  .image_list div {
     width: 100%;

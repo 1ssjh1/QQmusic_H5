@@ -27,6 +27,7 @@ customElements.define('swiper-card', class TodoApp extends HTMLElement {
     bindEvent() {
 
         this.scroll_wrapper.addEventListener("touchstart", this.handleTouchStart, false);
+
         this.scroll_wrapper.addEventListener("touchmove", this.touchmoveHandler, false);
         // this.scroll_wrapper.addEventListener("touchend", this.handleTouchEnd, false);
 

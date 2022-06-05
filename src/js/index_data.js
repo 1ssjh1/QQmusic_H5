@@ -3,6 +3,7 @@ import { index_get, search_get } from "./_axios.js"
 
 
 // 轮播图组件传值
+
 let swiper = document.querySelectorAll("swiper-card");
 
 index_get("/recommendations").then(res => {

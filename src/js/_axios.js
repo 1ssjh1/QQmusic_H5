@@ -22,6 +22,7 @@ export function index_get(url) {
             if (response) {
                 switch (response.status) {
                     case 401:
+
                         console.log(response);
                         break;
                     case 403:

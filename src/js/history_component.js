@@ -74,7 +74,7 @@ customElements.define('history-card', class history_component extends HTMLElemen
         </section>
         <section class="content">
         </section>
-    </div>
+    </div> 
            `;
 
         this._shadowRoot.appendChild(template.content.cloneNode(true));

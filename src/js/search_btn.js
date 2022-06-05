@@ -68,6 +68,7 @@ let rank_list = document.querySelector(".rank_list")
 sml_title.addEventListener("click", (e) => {
 
     if (e.target.innerText == "排行") {
+
         tab_cont.style.display = "none";
         rank_list.style.display = "block";
         footers.style.display = "none";

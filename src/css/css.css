@@ -1,0 +1,85 @@
+/* .swiper {
+    width: 98%;
+    margin: 0 auto;
+    border: 1px solid pink;
+    overflow: hidden;
+    margin-top: .8rem;
+}
+
+.swiper ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.swiper li {
+    margin: 0 .2333rem 0 .2333rem;
+    text-decoration: none;
+    list-style: none;
+    width: 3.1213rem;
+    height: 3.5747rem;
+}
+
+.swiper li div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper li div img {
+    width: 2.9067rem;
+    height: 2.9067rem;
+    border-radius: 0.2rem;
+}
+
+.swiper li div p {
+    bottom: .6603rem;
+    right: .0;
+    font-size: .3467rem;
+    border-radius: 9px;
+    height: 0.4533rem;
+    width: 2rem;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+}
+
+.swiper li div h5 {
+    font-weight: 400;
+    font-size: .3467rem;
+    margin-top: -0.003rem;
+    white-space: nowrap;
+}
+
+.swiper .title {
+    width: 100%;
+    height: .8533rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swiper .title h3 {
+    font-size: .48rem;
+    text-align: center;
+}
+
+.swiper .title a {
+    font-size: .3733rem;
+    text-align: center;
+} */
+
+
+/* swiper 结束 */
+
+
+/* search_mod */
+
+
+/* listbufen */
+
+.FOO {
+    font-size: 9px;
+}

@@ -1,0 +1,334 @@
+
+//  模板
+.border(){
+    border: 1px solid pink;
+   
+}
+// 搜索函数
+.search(){
+    width: 70%;
+    text-align:start;
+}
+// 
+.flex(@way:nowrap row ,@justify:none ,@align:none) { 
+display: flex;
+flex-flow:@way;
+justify-content: @justify;
+align-items: @align;
+
+
+
+}
+
+// 模板函数 记得导入 到 其他的 less 文件里面 
+
+
+
+
+
+
+
+
+
+html{
+    max-width: 540px;
+    min-width: 320px;
+}
+
+
+
+//  头部固定样式
+header{ 
+  
+    top: 0;
+    height: 2.5707rem;
+    font-size: 12px;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    flex-flow: nowrap column;
+   background-color: #fafafa;
+
+
+    img{
+        height: .6693rem;
+        width: .6693rem;
+     
+    }
+    &>:nth-child(1){
+     flex: 1.286;
+
+     .flex(nowrap row,space-between);
+
+
+         .left{
+        
+           .flex();
+           float: 3;
+           h2{
+            font-size: 14px;
+            color: #000;
+            font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: .4rem;
+           }
+           p{
+               
+               line-height: .3067rem;
+               margin-top: -0.1333rem;
+                
+               color: grey;
+           }
+           .img_icon{
+               height: 100%;
+               width: 50%;
+             flex: 1;
+             margin-right: .4067rem;
+             margin-left: .4067rem;
+            .flex(column ,center ,center);
+           }
+           .qq_music{
+               flex: 4.5;
+            
+           }
+          
+       }
+
+       .right {
+       
+          height: 100%;
+          flex: 1;
+       
+           .flex(column,center,center);
+           div{
+            width: 2.2933rem;
+            height: .6667rem;
+            margin-right: -2.0rem;
+            border-radius: .5333rem;
+            border: solid 1px #d8d8d8;
+            .flex(column,center,center);
+           }
+          a{ 
+          font-weight: 400;
+           text-align: center;
+           color: #575656;
+        
+        }
+           
+       }
+    }
+    &>:nth-child(2){
+        flex: 1;
+        .flex();
+        div{
+           flex: 1;
+           .flex(row ,center ,center);
+           span{
+          
+               font-size: .3633rem;
+               line-height: 1.0rem;   
+               width: 1.6rem; 
+                text-align: center;
+               display: inline-block;
+             
+           }
+            .active{
+
+            color: rgba(34,213,156,1);
+            border-bottom:3.5px solid  #22D59C ;
+           }
+        }
+    }
+ 
+}
+
+// 中间样式
+
+.tab_cont{
+    margin: 3.1667rem auto ;
+    .search_box{
+       width: 100%;
+       height: 1.0667rem;
+       .flex(row,center,center);
+       position: relative;
+       .search_btn{
+           width: 90%;
+           height: 90%;
+           text-align: center;
+           font-size: .3733rem;
+           font-weight: 400;
+           border-radius: .8rem;
+           background-color: #fafafa;
+        }
+        i{
+            font-size: .4733rem;
+            font-weight: 700;
+        }
+        .search{
+            .search();
+        }
+       }
+        .search_icon{
+            width: .4rem;
+            height: .4rem;
+            font-size: .6667rem;
+            font-weight: 700;
+            position: absolute;   
+            left: 39%;  
+            top:20%;
+         
+           
+       }
+
+}
+
+
+
+
+
+//  四个 模块 统一配置
+
+
+.rank_list,
+.search_btn,
+.search
+,.rank_list{
+    width: 91%;
+    margin:2.0rem auto;
+    height: 8.56rem;
+}
+
+.hot{
+    width: 91%;
+    margin:1.4rem auto;
+}
+.rank_list{
+    width: 96%;
+    margin:2.9rem auto;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  取出 排行版组件的样式 泪目了 我的组件
+
+.list {
+    width: 100%;
+    height: 2.8073rem;
+    display: flex;
+    margin-top: .6667rem;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.list .top_list {
+    width: 6.2667rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.list h5 {
+    font-size: .3567rem;
+    line-height: 0rem;
+    margin-bottom:0.05rem;
+    margin-top:-0.05rem
+}
+
+.list p {
+    font-size: .3467rem;
+    font-weight: 300;
+    line-height: 0rem;
+    color: rgba(26, 26, 26, .5);
+    margin-bottom: 0.07rem;
+}
+
+.list p strong {
+    font-size: .0733rem;
+    color: rgba(26, 26, 26, 1);
+}
+.list .top_list i{
+    font-size: 0.11rem;
+    line-height: 0rem;
+    margin-bottom:0rem;
+}
+
+
+//  底部qq音乐组件
+.footers{
+  width: 100%;
+  height: 2.754rem;
+  margin-bottom: 3rem;
+  .flex(column,center,center);
+  div:nth-child(1){
+    width:2.02rem;
+    height: .6567rem;
+    margin: 0 auto;
+    background: url(../image/logo_ch.svg) center center  no-repeat ;
+    background-size: 100% 100%;
+  }
+  div:nth-child(n+1){
+   height: .4827rem;
+  text-align: center;
+      
+  } 
+  div{
+    color: rgba(26,26,26,1);
+    
+  }
+  
+}
+
+
+
+
+// 底部固定样式 
+
+footer{
+
+    width: 100%;  
+    height: 2.0536rem;
+      bottom: .4rem;
+      box-shadow: 0 3px 25px rgb(0 0 0 / 5%);
+      position: fixed;
+      .flex(row, center,center);
+       .foot{
+        background-color: #fafafa;
+       width: 5.4667rem;
+       height: 1.2rem;
+       border-radius: 1.3333rem;
+       .flex();
+        :nth-child(1){
+          flex: 1;
+          background: url(../image/logo.svg)  center center  no-repeat;
+      
+           background-size: .5867rem  .5867rem;
+
+        };
+      :nth-child(2){
+            height: 100%;
+            flex: 5;
+            font-size: 13px;
+            color: rgba(26,26,26,1);
+            line-height:  1.2rem;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+}

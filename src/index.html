@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ_MUSIC</title>
+
+
+
+</head>
+
+<body>
+    <!-- 头部固定样式 -->
+    <header>
+        <section>
+            <div class="left">
+                <div class="img_icon"> <img src="./image/logo.svg"> </div>
+                <div class="qq_music">
+                    <h2 class="iconfont">QQ音乐</h2>
+                    <p> 打开APP收藏下载</p>
+                </div>
+            </div>
+            <div class="right">
+
+                <div> <a href="javascript:void(0)">下载APP</a></div>
+
+            </div>
+        </section>
+        <section class="sml_title">
+            <div> <span class="active">推荐</span> </div>
+            <div> <span class="no_active">排行</span> </div>
+        </section>
+    </header>
+    <!-- 推荐 板块所有组件 -->
+    <section class="tab_cont" style="font-display: none;">
+        <!-- 搜索框组件 -->
+        <section class="search_box">
+            <p class="search_icon iconfont">&#xe603;</p>
+            <input class="search_btn" type="text" placeholder="搜索">
+            <i style="display: none;">取消</i>
+        </section>
+
+        <!-- 首页组件 -->
+        <section class="disappear">
+            <swiper-card _title="官方歌单" _width="2.9067rem;" _height="2.9067rem;"></swiper-card>
+            <swiper-card _title="达人歌单" _width="2.9067rem;" _height="2.9067rem;"></swiper-card>
+            <swiper-card _title="专区" _width="6.0267rem;" _height="2.9067rem;"></swiper-card>
+        </section>
+
+        <!-- 热歌组件 -->
+        <section class="hot" style="display: none;">
+            <hot-card> </hot-card>
+        </section>
+
+        <section class="search_something" style="display: none;">
+            <search-card> </search-card>
+
+        </section>
+    </section>
+    <!-- 最后改造的 组件了 来不及用 js生成 .... -->
+
+    <!-- 排行 板块所有组件 -->
+    <section id="List" class="rank_list" style="display: none;">
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+        <div class="list">
+            <div class="top_list">
+                <h5></h5>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+                <p><strong></strong></p>
+                <i></i>
+            </div>
+            <img-card></img-card>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- 尾部固定样式 -->
+    <div class="footers">
+        <div></div>
+        <div>Copyright © 1998 - 2019 Tencent. All Rights Reserved.</div>
+        <div>联系电话：0755-86013388 QQ群：55209235</div>
+    </div>
+    <footer>
+        <div class="foot">
+            <div></div>
+            <div> 安装QQ音乐 发现更多精彩</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
